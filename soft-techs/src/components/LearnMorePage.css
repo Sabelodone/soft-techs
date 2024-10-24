@@ -1,34 +1,33 @@
 .learn-more-page {
-    padding: 40px;
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 1100px; /* Increased width to accommodate team members section */
-    margin: auto;
-    text-align: center; /* Center all text inside the learn-more-page */
+    padding: 0;
+    background-color: #fafafa; /* Light background for the overall page */
+    max-width: 100%; /* Full-width layout */
+    margin: 0 auto; /* Center content */
 }
 
 .header {
     text-align: center;
     margin-bottom: 40px;
+    padding: 60px 20px; /* Increased padding for a more spacious header */
+    background-color: #5a3e91; /* Purple background for header */
+    color: #ffffff;
 }
 
 .header h1 {
-    color: #333333;
     font-size: 48px; /* Larger font size */
-    font-weight: 900; /* Increased font weight */
-    text-align: center;
+    font-weight: 900; /* Bold font weight */
+    margin: 0;
 }
 
 .tagline {
-    color: #5a3e91;
     font-size: 22px;
     font-style: italic;
     margin-top: 10px;
+    color: #ffffff;
 }
 
 .content {
+    padding: 0 20px;
     margin-bottom: 40px;
 }
 
@@ -36,58 +35,51 @@
     color: #5a3e91;
     margin-top: 30px;
     font-size: 36px; /* Larger font size */
-    font-weight: 800; /* Increased font weight */
-    border-bottom: 2px solid #5a3e91;
+    font-weight: 800;
     padding-bottom: 10px;
-    text-align: center;
+    text-align: center; /* Center align text */
 }
 
 .content p {
     color: #555555;
-    line-height: 1.8; /* Slightly increased line height */
+    line-height: 1.6; /* Adjusted for improved readability */
     margin-bottom: 20px;
-    font-size: 20px; /* Larger font size */
-    font-weight: 500; /* Increased font weight */
+    font-size: 20px;
+    font-weight: 500;
     text-align: center;
 }
 
 /* Team Section */
 .team-section {
     margin-top: 50px;
-}
-
-.team-section h2 {
-    color: #5a3e91;
-    font-size: 36px; /* Larger font size */
-    font-weight: 800; /* Increased font weight */
-    border-bottom: 2px solid #5a3e91;
-    padding-bottom: 10px;
-    text-align: center;
-    margin-bottom: 40px;
+    padding: 0 20px;
 }
 
 .team-members {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px; /* Gap between team members */
-    margin-bottom: 40px;
+    justify-content: space-around; /* Adjusted to provide more space between members */
+    gap: 20px;
 }
 
 .team-member {
     text-align: center;
-    flex: 0 1 250px; /* Flex property to handle responsive layouts */
-    background-color: #f9f9f9; /* Light background for member card */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for card */
+    flex: 0 1 250px; /* Flex basis for team members */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
 }
 
 .team-member img {
     width: 150px;
     height: 150px;
-    object-fit: cover; /* Ensure image fits well */
+    object-fit: cover;
     margin-bottom: 15px;
+    border-radius: 50%; /* Circular images */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for better focus */
 }
 
 .team-member h3 {
@@ -115,9 +107,9 @@
     display: block;
     text-align: center;
     margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
 
-/* Button hover effect */
 .learn-more-button:hover {
     background-color: #FF6347;
     transform: scale(1.05);
@@ -125,24 +117,24 @@
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-    .learn-more-page {
-        padding: 20px;
+    .header h1 {
+        font-size: 36px;
     }
 
-    .learn-more-page h1 {
-        font-size: 36px; /* Adjusted for mobile */
+    .tagline {
+        font-size: 18px; /* Smaller font size for the tagline on small screens */
     }
 
-    .learn-more-page h2 {
-        font-size: 28px; /* Adjusted for mobile */
+    .content h2 {
+        font-size: 28px;
     }
 
-    .learn-more-page p {
-        font-size: 18px; /* Adjusted for mobile */
+    .content p {
+        font-size: 18px;
     }
 
     .team-members {
-        flex-direction: column; /* Stack team members vertically on small screens */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -150,4 +142,17 @@
         font-size: 18px;
         padding: 10px 16px;
     }
+}
+
+
+.team-section {
+    text-align: center; /* Center aligns text within the section */
+    margin-top: 50px; /* Space above the team section */
+}
+
+.team-section h2 {
+    color: #5a3e91; /* Set color if needed */
+    font-size: 36px; /* Adjust font size as desired */
+    font-weight: 800; /* Set font weight */
+    margin-bottom: 20px; /* Space below the heading */
 }
