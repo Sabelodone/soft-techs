@@ -79,13 +79,13 @@ const LearnMorePage = () => {
         </p>
       </section>
 
-      <footer className="footer">
+      <div>
        
 
         <Link to="/products">
           <button className="learn-more-button" aria-label="Learn more about our services">Services</button>
         </Link>
-      </footer>
+      </div>
     </div>
   );
 };
