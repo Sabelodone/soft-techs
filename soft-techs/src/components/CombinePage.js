@@ -60,7 +60,7 @@ const CombinedPage = () => {
       {/* Landing Page Header */}
       <div className="hero-section text-center text-white py-5">
         <img className="img-fluid mb-3" src={logoPath} alt="Soft-Techs Logo" style={{ maxWidth: '200px' }} />
-        <h2 className="display-4">Softer Productivity for Every Industr</h2>
+        <h2 className="display-4">Softer Productivity for Every Industry</h2>
         <p className="lead">"Soft-Techs offers user-friendly software solutions that boost productivity and streamline workflows.</p>
         <Link to="/learn-more" className="btn btn-warning mx-2 rounded-pill shadow" aria-label="Learn more about Soft-Techs Suite-System">Learn More</Link>
       </div>
@@ -149,14 +149,17 @@ const CombinedPage = () => {
     
     <div className="row align-items-center"> {/* Align items to the center vertically */}
       <div className="col-sm-12 col-md-6"> {/* Image on the left */}
-        <img 
-          src="/ad0d5346-b722-46e6-b4a7-d18259b2d56d_0.jpeg" 
-          alt="Exciting Feature" 
-          className="img-fluid" 
-        />
+      <img 
+  src="/ad0d5346-b722-46e6-b4a7-d18259b2d56d_0.jpeg" 
+  alt="Exciting Feature" 
+  className="img-fluid mx-auto d-block" 
+  style={{ maxWidth: '100%', marginLeft: 'auto', marginRight: 'auto' }} 
+/>
+
       </div>
       <div className="col-sm-12 col-md-6 text-content"> {/* Text on the right */}
-      <h5 className="mb-4 text-left">Frequently Asked Questions</h5>
+      <h5 className="mb-4 text-left" style={{ fontSize: '40px', fontWeight: '700', color: '#333' }}>Frequently Asked Questions</h5>
+
       <h5>What services does Soft-Techs offer?</h5>
       <p>We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
       <h5>How can I contact Soft-Techs for support?</h5>
