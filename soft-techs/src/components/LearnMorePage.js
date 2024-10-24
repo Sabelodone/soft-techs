@@ -74,7 +74,7 @@ const LearnMorePage = () => {
       </p>
 
       <Link to="/products">
-        <button className="learn-more-button">Learn More</button>
+        <button className="learn-more-button">Services</button>
       </Link>
     </div>
   );
