@@ -91,59 +91,54 @@ const CombinedPage = () => {
         </div>
       </section>
 
-      {/* Feature Section */}
+  {/* Feature Section */}
 
 <section className="features-section">
   <div className="container">  
     <div className="row justify-content-start align-items-center"> {/* Align items to the left */}
       <div className="col-sm-12 col-md-6 col-lg-6"> {/* Adjusting column width */}
-        
-    <h2 className="mb-4 text-left">Discover Our Exclusive Offerings</h2>
+        <h2 className="mb-4 text-left">Discover Our Exclusive Offerings</h2>
         <h3 className="font-weight-bold">Premium Quality</h3>
         <p>Experience top-notch quality with every service we provide, tailored just for you!</p>
         <Link to="/products" className="btn btn-primary mt-4">
           View Our Products
-       </Link>
+        </Link>
       </div>
       <div className="col-sm-12 col-md-6 col-lg-6"> {/* Image on the right */}
-        <img src="/91fa1ba7-e1dc-492c-a1d0-d3554752b0a8_0.jpeg" alt="Exciting Feature" className="img-fluid" />
+        <img 
+          src="/91fa1ba7-e1dc-492c-a1d0-d3554752b0a8_0.jpeg" 
+          alt="Exciting Feature" 
+          className="img-fluid" 
+          style={{ marginLeft: '110px' }} // Adjust the margin as needed
+        />
       </div>
     </div>
     {/* Repeat the above block for additional features without content */}
-
-    
   </div>
 </section>
 
 
 
 
-   {/* Fraquatly asked Section */}
+
+   {/* Frequently Asked Section */}
 <section className="features-section py-5">
   <div className="container">
-    
-    
     <div className="row align-items-center"> {/* Align items to the center vertically */}
       <div className="col-sm-12 col-md-6"> {/* Image on the left */}
-      <img 
-  src="/ad0d5346-b722-46e6-b4a7-d18259b2d56d_0.jpeg" 
-  alt="Exciting Feature" 
-  className="img-fluid mx-auto d-block" 
-  style={{ maxWidth: '100%', marginLeft: 'auto', marginRight: 'auto' }} 
-/>
-
+      <img src="/ad0d5346-b722-46e6-b4a7-d18259b2d56d_0.jpeg" alt="Exciting Feature" className="img-fluid" />
       </div>
       <div className="col-sm-12 col-md-6 text-content"> {/* Text on the right */}
-      <h5 className="mb-4 text-left" style={{ fontSize: '40px', fontWeight: '700', color: '#333' }}>Frequently Asked Questions</h5>
-
-      <h5>What services does Soft-Techs offer?</h5>
-      <p>We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
-      <h5>How can I contact Soft-Techs for support?</h5>
-      <p>You can reach out to us via the 'Contact Us' button on our website or directly through our support email at support@softtechs.co.za.</p>
+        <h2 className="mb-4 text-left">Frequently Asked Questions</h2>
+        <h3>What services does Soft-Techs offer?</h3>
+        <p>We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
+        <h3>How can I contact Soft-Techs for support?</h3>
+        <p>You can reach out to us via the 'Contact Us' button on our website or directly through our support email at support@softtechs.co.za.</p>
       </div>
     </div>
   </div>
 </section>
+
 
 
 

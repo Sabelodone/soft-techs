@@ -111,11 +111,12 @@
 }
 
 .features-section img {
-    max-width: 100%; /* Make images responsive */
+    max-width: 80%; /* Set maximum width to 50% to make images smaller */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+    margin-bottom: 15px; /* Space below the image */
 }
 
 .features-section img:hover {
@@ -131,7 +132,7 @@
     background-color: #6f42c1; /* Match button color with heading */
     color: #fff; /* White text for button */
     border-radius: 4px; /* Rounded button corners */
-    padding: 0.5rem 1.5rem; /* Button padding */
+    padding: 0.5rem 0.5rem; /* Button padding */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
     margin-top: 15px; /* Space above the button */
 }
@@ -201,7 +202,7 @@
 .call-to-action-section {
     position: relative; /* Allows absolute positioning of inner elements if needed */
     width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
+    height: 70vh; /* Full height of the viewport */
     display: flex; /* Use flexbox for centering content */
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
