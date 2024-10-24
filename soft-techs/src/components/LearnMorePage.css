@@ -78,7 +78,7 @@
     height: 150px;
     object-fit: cover;
     margin-bottom: 15px;
-    border-radius: 50%; /* Circular images */
+   
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for better focus */
 }
 
