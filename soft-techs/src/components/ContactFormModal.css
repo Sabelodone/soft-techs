@@ -54,3 +54,26 @@ button:hover {
 button:focus {
     outline: none; /* Remove default focus outline */
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 576px) {
+    .modal-body {
+        padding: 1rem; /* Less padding on small screens */
+    }
+    
+    .modal-title {
+        font-size: 1.25rem; /* Smaller title size on small screens */
+    }
+
+    .form-label {
+        font-size: 0.9rem; /* Smaller font size for labels on small screens */
+    }
+
+    .form-control {
+        font-size: 0.9rem; /* Smaller font size for input fields on small screens */
+    }
+
+    .btn {
+        width: 100%; /* Full-width button on small screens */
+    }
+}

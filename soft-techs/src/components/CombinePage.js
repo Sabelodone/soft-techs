@@ -15,7 +15,7 @@ const CombinedPage = () => {
   return (
     <div className="landing-page">
       {/* Navbar */}
-<nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
   <div className="container">
     <Link to="/" className="navbar-brand">
       <img src={logoPath} alt="Soft-Techs Logo" style={{ maxWidth: '50px' }} />
@@ -28,6 +28,7 @@ const CombinedPage = () => {
       aria-controls="navbarNav" 
       aria-expanded="false" 
       aria-label="Toggle navigation"
+      onClick={() => alert('Navbar toggled!')} // Testing click
     >
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -48,6 +49,7 @@ const CombinedPage = () => {
     </div>
   </div>
 </nav>
+
 
       {/* Background Video */}
       <div className="video-background">

@@ -3,7 +3,6 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import './ContactFormModal.css'; // Adjust the path as necessary
 
-
 const ContactFormModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -28,10 +27,10 @@ const ContactFormModal = ({ isOpen, onClose }) => {
 
   return (
     <Modal show={isOpen} onHide={onClose} centered>
-      <Modal.Header closeButton>
-        <Modal.Title>Contact Us</Modal.Title>
+      <Modal.Header closeButton className="modal-header">
+        <Modal.Title className="modal-title">Contact Us</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="modal-body">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label">Name</label>
@@ -63,14 +62,14 @@ const ContactFormModal = ({ isOpen, onClose }) => {
               className="form-control"
               id="message"
               name="message"
-              rows="3"
+              rows="4" // Adjusting row height for a better user experience
               value={formData.message}
               onChange={handleChange}
               required
             ></textarea>
           </div>
-          <Button variant="primary" type="submit">
-            Submit
+          <Button variant="primary" type="submit" className="btn">
+            Send Message
           </Button>
         </form>
       </Modal.Body>
