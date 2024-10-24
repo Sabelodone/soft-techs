@@ -91,6 +91,48 @@
     z-index: 1;
 }
 
+
+.btn-warning {
+    background-color: #ffc107; /* Original button color */
+    color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    transform: scale(1); /* Default scale */
+    border: none; /* Clean border */
+    font-weight: bold; /* Make text bold */
+    padding: 10px 20px; /* Adjust padding for better size */
+    position: relative; /* Ensure position for pseudo-elements */
+    z-index: 1;
+    overflow: hidden; /* Hide the overflow for pseudo-elements */
+  }
+  
+  .btn-warning::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  .btn-warning:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .btn-warning:hover {
+    background-color: #fff; /* Change background to white on hover */
+    color: white; /* Change text color to the original button color */
+    transform: scale(1.1); /* Slightly increase size to "pop out" */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Larger shadow for the bubble effect */
+  }
+  
+
+
+
 .video-background {
     position: absolute;
     top: 0;
