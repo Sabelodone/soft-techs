@@ -43,10 +43,8 @@ const Footer = () => {
 
                     <div className="contact-info mb-4">
                         <h5>Contact Us</h5>
-                        <p>Email: <a href="mailto:jameson@softtechs.co.za" className="text-light">jameson@softtechs.co.za</a></p>
-                        <p>Email: <a href="mailto:sabelo@softtechs.co.za" className="text-light">sabelo@softtechs.co.za</a></p>
-                        <p>Phone: <a href="tel:+270739182393" className="text-light">(073) 918 2393</a></p>
-                        <p>Phone: <a href="tel:+270746422396" className="text-light">(074) 642 2396</a></p>
+                        <p>Email: <a href="mailto:jameson@softtechs.co.za" className="text-light">info@softtechs.co.za</a></p>
+                        <p>Phone: <a href="tel:+270746422396" className="text-light">(074) 642 2396 / (073) 918 2393</a></p>
                     </div>
                 </div>
 
