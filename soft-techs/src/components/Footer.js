@@ -5,11 +5,30 @@ import InfoModal from './Modal'; // Import the InfoModal component
 const Footer = () => {
     // Define footer link texts
     const footerLinks = [
-        { label: 'About Us', content: "At TechArtistry Design, we are committed to providing innovative and creative design solutions to help your business succeed." },
-        { label: 'Contact Us', content: "For inquiries or support, please reach out to us at contact@techartistrydesign.com." },
-        { label: 'Terms of Service', content: "By using our services, you agree to comply with our terms of service." },
-        { label: 'Privacy Policy', content: "Your privacy is very important to us." }
-    ];
+        {
+          label: 'About Us',
+          content: "At TechArtistry Design, we are dedicated to delivering innovative and creative design solutions tailored to meet your business's needs. Our expert team specializes in providing high-quality web design, graphic design, and branding services to help your business stand out in a competitive market."
+        },
+        {
+          label: 'Contact Us',
+          content: "For inquiries or customer support, please feel free to contact us at any time. Email us at contact@techartistrydesign.com or reach out via phone: (074) 642 2396 / (073) 918 2393. Our team is available to assist you with any questions you may have."
+        },
+       
+        {
+          label: 'Subscribe to our Newsletter',
+          content: "Stay updated with the latest news, trends, and exclusive offers from SoftTechs. Enter your email address below to subscribe and be the first to know about our new services and promotions."
+        },
+        {
+          label: 'Terms of Service',
+          content: "By accessing or using our services, you agree to abide by the terms and conditions outlined in our Terms of Service. Please take a moment to review our policies to ensure you fully understand your rights and responsibilities."
+        },
+        {
+          label: 'Privacy Policy',
+          content: "Your privacy is very important to us. We take all necessary measures to protect your personal data and ensure it is used in accordance with our Privacy Policy."
+        },
+       
+      ];
+      
 
     // State to manage modal visibility and content
     const [modalInfo, setModalInfo] = useState({ isOpen: false, title: '', content: '' });

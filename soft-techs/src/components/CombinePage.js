@@ -97,7 +97,8 @@ const CombinedPage = () => {
   <div className="container">  
     <div className="row justify-content-start align-items-center"> {/* Align items to the left */}
       <div className="col-sm-12 col-md-6 col-lg-6"> {/* Adjusting column width */}
-        <h2 className="mb-4 text-left">Discover Our Exclusive Offerings</h2>
+      <h2 className="mb-4 text-left">🔍 Discover Our Exclusive Offerings</h2>
+
         <h3 className="font-weight-bold">Premium Quality</h3>
         <p>Experience top-notch quality with every service we provide, tailored just for you!</p>
         <Link to="/products" className="btn btn-primary mt-4">
@@ -131,9 +132,9 @@ const CombinedPage = () => {
       <div className="col-sm-12 col-md-6 text-content"> {/* Text on the right */}
         <h2 className="mb-4 text-left">Frequently Asked Questions</h2>
         <h3>What services does Soft-Techs offer?</h3>
-        <p>We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
+        <p>☑️We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
         <h3>How can I contact Soft-Techs for support?</h3>
-        <p>You can reach out to us via the 'Contact Us' button on our website or directly through our support email at support@softtechs.co.za.</p>
+        <p>☑️You can reach out to us via the 'Contact Us' button on our website or directly through our support email at support@softtechs.co.za.</p>
       </div>
     </div>
   </div>
@@ -146,7 +147,8 @@ const CombinedPage = () => {
       {/* Call to Action Section */}
 <section className="call-to-action-section">
   <div className="container">
-    <h2 className="display-4 font-weight-bold text-dark mb-4">Ready to Get Started?</h2>
+  <h2 className="display-4 font-weight-bold text-dark mb-4"> Ready to Get Started?🏁</h2>
+
     <p className="lead text-dark mb-4">
       Contact us today for a personalized consultation!
     </p>
