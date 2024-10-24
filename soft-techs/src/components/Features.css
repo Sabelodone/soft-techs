@@ -1,0 +1,56 @@
+/* FeaturesPage.css */
+
+/* Page Background and Font */
+.features-page {
+    background-color: #eaeaea; /* Light grey background for a professional look */
+    font-family: 'Arial', sans-serif; /* Professional font */
+    padding: 40px;
+    text-align: center; /* Center align text */
+  }
+  
+  /* Page Heading Styles */
+  .features-page h1 {
+    font-size: 36px; /* Large heading */
+    color: #2c3e50; /* Dark blue for the title */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  /* Features List Styles */
+  .features-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: center; /* Center align the cards */
+    gap: 20px; /* Space between cards */
+  }
+  
+  /* Feature Card Styles */
+  .feature-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #3498db; /* Blue border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the cards */
+    width: 250px; /* Fixed width for cards */
+    text-align: center; /* Center text inside cards */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animation effect */
+  }
+  
+  /* Feature Card Hover Effect */
+  .feature-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Feature Card Heading Styles */
+  .feature-card h3 {
+    color: #2980b9; /* Blue for card headings */
+    font-size: 24px; /* Size for headings */
+    margin-bottom: 10px; /* Space below headings */
+  }
+  
+  /* Feature Card Paragraph Styles */
+  .feature-card p {
+    color: #444; /* Darker grey for card text */
+    font-size: 16px; /* Size for paragraph */
+  }
+  

@@ -1,0 +1,76 @@
+.learn-more-page {
+    padding: 40px; /* Increased padding for a more spacious feel */
+    font-family: 'Arial', sans-serif; /* Use a professional font */
+    background-color: #ffffff; /* Bright white background */
+    border-radius: 10px; /* Rounded corners for a friendly look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 800px; /* Max width for better readability */
+    margin: auto; /* Centering the content */
+}
+
+.learn-more-page h1 {
+    color: #333333; /* Dark gray for a professional appearance */
+    font-size: 36px; /* Larger font for the main title */
+    text-align: center; /* Center align the title */
+    margin-bottom: 20px; /* Space below the title */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+.learn-more-page h2 {
+    color: #5a3e91; /* Purple color for subheadings */
+    margin-top: 30px; /* Space above subheadings */
+    font-size: 28px; /* Slightly larger font size for subheadings */
+    border-bottom: 2px solid #5a3e91; /* Underline for emphasis */
+    padding-bottom: 10px; /* Space below the border */
+}
+
+.learn-more-page p {
+    color: #555555; /* Medium gray for text */
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 20px; /* Space below paragraphs */
+    font-size: 18px; /* Slightly larger font size */
+}
+
+.learn-more-button {
+    background-color: #5a3e91; /* Purple background */
+    color: #ffffff; /* White text */
+    padding: 12px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor for button */
+    font-size: 20px; /* Larger font size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    display: inline-block; /* Inline-block for spacing */
+    text-align: center; /* Center align button text */
+    margin: 20px auto; /* Center button with margin */
+}
+
+/* Button hover effect */
+.learn-more-button:hover {
+    background-color: #FF6347; /* Change background on hover */
+    transform: scale(1.05); /* Slightly scale up on hover for effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .learn-more-page {
+        padding: 20px; /* Less padding for mobile */
+    }
+
+    .learn-more-page h1 {
+        font-size: 28px; /* Smaller title on mobile */
+    }
+
+    .learn-more-page h2 {
+        font-size: 24px; /* Smaller subheadings on mobile */
+    }
+
+    .learn-more-page p {
+        font-size: 16px; /* Smaller paragraph text on mobile */
+    }
+
+    .learn-more-button {
+        font-size: 18px; /* Smaller button text on mobile */
+        padding: 10px 16px; /* Less padding for mobile */
+    }
+}

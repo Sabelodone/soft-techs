@@ -1,0 +1,417 @@
+/* General Styles */
+.landing-page {
+    position: relative;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif; /* Use a clean, professional font */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 50vh; /* Full viewport height */
+    padding: 80px 20px; /* Adjusted padding for top and bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height */
+    z-index: -1;
+}
+
+.hero-section img {
+    margin-bottom: 20px;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+/* Product Overview Section */
+.product-overview {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Headings */
+.product-overview h2 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Paragraph */
+.product-overview p {
+    font-size: 1.2rem;
+    color: #495057;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.product-overview .btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px; /* Increased padding for better touch targets */
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-overview .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Optional Image */
+.product-overview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+/* Features Section */
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.features-section h2,
+.features-section h3 {
+    color: #5a5a5a;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Features Container */
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+/* Card Styles */
+.feature-card {
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+    margin: 10px;
+}
+
+/* Card Hover Effect */
+.feature-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay Effect */
+.feature-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature-card:hover::after {
+    opacity: 1;
+}
+
+/* Card Titles */
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Card Descriptions */
+.feature-card p {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.5;
+    padding: 0 15px;
+}
+
+/* Button Style */
+.feature-card .btn {
+    margin-top: 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px; /* Increased padding for better touch targets */
+    border-radius: 25px;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.feature-card .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Add to your CombinedPage.css */
+
+.faq-section {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 2rem; /* Extra padding for a spacious feel */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: right; /* Aligns all text to the right */
+}
+
+.faq-section h2 {
+    color: #343a40; /* Darker color for the heading */
+    margin-bottom: 1.5rem; /* Space below the heading */
+    text-align: center; /* Keep heading centered */
+    font-size: 28px; /* H2 size */
+}
+
+.faq-section .right-align {
+    text-align: right; /* Aligns text to the right */
+    margin-bottom: 1rem; /* Space below each question/answer */
+}
+
+.faq-section h5 {
+    font-size: 1.25rem; /* Slightly larger font size for questions */
+    color: #333; /* Darker color for better readability */
+}
+
+.faq-section p {
+    font-size: 1rem; /* Consistent font size for answers */
+    color: #555; /* Lighter color for answers */
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+.faq-section .btn {
+    background-color: #6f42c1; /* Match button color with heading */
+    color: #fff; /* White text for button */
+    border-radius: 4px; /* Rounded button corners */
+    padding: 0.5rem 1.5rem; /* Button padding */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.faq-section .btn:hover {
+    background-color: #5a32a0; /* Darker shade on hover */
+}
+
+.faq-section img {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.faq-section img:hover {
+    transform: scale(1.05); /* Scale image slightly on hover for effect */
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .faq-section img {
+        width: 100%; /* Make image responsive */
+        max-width: 200px; /* Set a maximum width for smaller screens */
+    }
+}
+
+
+
+  /* Add to your CombinedPage.css */
+
+.call-to-action-section {
+    background-color: #ffffff; /* White background for clarity */
+    border: 1px solid #dee2e6; /* Subtle border for definition */
+    border-radius: 8px; /* Rounded corners */
+    padding: 2rem; /* Padding for space around content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .call-to-action-section h2 {
+    color: #343a40; /* Darker color for the heading */
+    margin-bottom: 1rem; /* Space below the heading */
+    font-size: 28px; /* H2 size */
+  }
+  
+  .call-to-action-section p {
+    color: #495057; /* Slightly lighter color for the paragraph */
+    line-height: 1.6; /* Improved line height for readability */
+  }
+  
+  .call-to-action-section .btn {
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text for contrast */
+    border-radius: 20px; /* Slightly less pronounced rounded corners */
+    padding: 0.5rem 1.5rem; /* Reduced padding for a smaller button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.call-to-action-section .btn:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+  
+  
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .hero-section h2 {
+        font-size: 2.5rem; /* Adjust title size for smaller screens */
+    }
+
+    .hero-section p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .product-overview h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .product-overview p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .feature-card h3 {
+        font-size: 1.25rem; /* Adjust title size for smaller screens */
+    }
+
+    .feature-card p {
+        font-size: 0.9rem; /* Adjust description size for smaller screens */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Adjust button size */
+        font-size: 0.9rem; /* Decrease font size for buttons */
+    }
+
+    .feature-card .btn {
+        padding: 10px 20px; /* Adjust button size for cards */
+        font-size: 0.9rem; /* Decrease font size for buttons */
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+
+.navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-brand img {
+        max-height: 30px;
+    }
+
+    .nav-link {
+        margin: 0 5px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-toggler.collapsed + .navbar-nav {
+        display: flex;
+    }
+
+    .navbar-nav.show {
+        display: flex;
+    }
+
+    /* Style adjustments for navbar links when visible */
+    .navbar-nav .nav-link {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.testimonials-section {
+    background-color: #f8f9fa;
+    padding: 50px 0; /* Add padding for top and bottom */
+}
