@@ -4,19 +4,33 @@
     background-color: #ffffff; /* Bright white background */
     border-radius: 10px; /* Rounded corners for a friendly look */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    max-width: 800px; /* Max width for better readability */
+    max-width: 900px; /* Max width for better readability */
     margin: auto; /* Centering the content */
 }
 
-.learn-more-page h1 {
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
     color: #333333; /* Dark gray for a professional appearance */
     font-size: 36px; /* Larger font for the main title */
-    text-align: center; /* Center align the title */
-    margin-bottom: 20px; /* Space below the title */
     font-weight: bold; /* Bold font for emphasis */
 }
 
-.learn-more-page h2 {
+.tagline {
+    color: #5a3e91; /* Purple for the tagline */
+    font-size: 20px; /* Font size for tagline */
+    font-style: italic; /* Italic for a distinctive style */
+    margin-top: 10px; /* Space above tagline */
+}
+
+.content {
+    margin-bottom: 40px; /* Space below content */
+}
+
+.content h2 {
     color: #5a3e91; /* Purple color for subheadings */
     margin-top: 30px; /* Space above subheadings */
     font-size: 28px; /* Slightly larger font size for subheadings */
@@ -24,7 +38,7 @@
     padding-bottom: 10px; /* Space below the border */
 }
 
-.learn-more-page p {
+.content p {
     color: #555555; /* Medium gray for text */
     line-height: 1.6; /* Increase line height for readability */
     margin-bottom: 20px; /* Space below paragraphs */
@@ -40,7 +54,7 @@
     cursor: pointer; /* Pointer cursor for button */
     font-size: 20px; /* Larger font size */
     transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
-    display: inline-block; /* Inline-block for spacing */
+    display: block; /* Block for centering */
     text-align: center; /* Center align button text */
     margin: 20px auto; /* Center button with margin */
 }

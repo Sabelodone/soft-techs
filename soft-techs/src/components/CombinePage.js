@@ -10,17 +10,6 @@ const CombinedPage = () => {
   
   const logoPath = '/logo-no-background (1).png'; // Logo image path
 
-  const features = [ // Features data
-    { id: 'cloud-services', title: 'Cloud Services', description: 'Provide scalable storage and computing solutions in the cloud.' },
-    { id: 'data-analytics-tools', title: 'Data Analytics Tools', description: 'Develop tools for analyzing and visualizing data to gain insights.' },
-    { id: 'ai-systems', title: 'AI Systems', description: 'Create intelligent systems for automation and predictive analytics.' },
-    { id: 'security-software', title: 'Security Software', description: 'Offer software solutions for protecting systems and data from threats.' },
-    { id: 'custom-software', title: 'Custom Software Development', description: 'Build tailored software solutions to meet specific business needs.' },
-    { id: 'mobile-apps', title: 'Mobile Applications', description: 'Develop mobile apps for iOS and Android platforms.' },
-    { id: 'ux-ui-design', title: 'UX/UI Design', description: 'Provide design services for user-friendly interfaces and experiences.' },
-    { id: 'devops-tools', title: 'DevOps Tools', description: 'Create tools to enhance collaboration between development and operations teams.' },
-  ];
-
 
 
   return (
@@ -100,36 +89,31 @@ const CombinedPage = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="features-section text-center py-5">
-        <div className="container">
-          <h2 className="mb-4">What we offer</h2>
-          <div className="row justify-content-center">
-            {features.map((feature) => (
-             
-             <div 
-             className="feature-card col-sm-12 col-md-6 col-lg-4 mb-4 zoom-in" 
-             key={feature.id} 
-             role="button"
-             tabIndex={0}
-             onKeyPress={(e) => {
-               if (e.key === 'Enter' || e.key === ' ') {
-                 // No action here since we don't want any response
-               }
-             }}
-           >
-             <div className="card p-3 h-100" style={{ cursor: 'pointer', border: '1px solid #ddd', borderRadius: '10px', transition: 'transform 0.2s' }} 
-               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} >
-               <h3 className="font-weight-bold">{feature.title}</h3>
-               <p>{feature.description}</p>
-             </div>
-           </div>
-           
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Feature Section */}
+
+<section className="features-section">
+  <div className="container">  
+    <div className="row justify-content-start align-items-center"> {/* Align items to the left */}
+      <div className="col-sm-12 col-md-6 col-lg-6"> {/* Adjusting column width */}
+        
+    <h2 className="mb-4 text-left">Discover Our Exclusive Offerings</h2>
+        <h3 className="font-weight-bold">Premium Quality</h3>
+        <p>Experience top-notch quality with every service we provide, tailored just for you!</p>
+        <Link to="/products" className="btn btn-primary mt-4">
+          View Our Products
+       </Link>
+      </div>
+      <div className="col-sm-12 col-md-6 col-lg-6"> {/* Image on the right */}
+        <img src="/91fa1ba7-e1dc-492c-a1d0-d3554752b0a8_0.jpeg" alt="Exciting Feature" className="img-fluid" />
+      </div>
+    </div>
+    {/* Repeat the above block for additional features without content */}
+
+    
+  </div>
+</section>
+
+
 
       {/* Testimonials Section */}
       <section className="testimonials-section bg-light text-center py-5">
@@ -158,40 +142,29 @@ const CombinedPage = () => {
         </div>
       </section>
 
-       {/* FAQ Section */}
-<section className="faq-section text-center py-5">
+   {/* Fraquatly asked Section */}
+<section className="features-section py-5">
   <div className="container">
-    <h2 className="mb-4">Frequently Asked Questions</h2>
-    <div className="row justify-content-end"> {/* Justifies content to the right */}
-      <div className="col-md-6 d-flex align-items-start mb-4"> {/* Flex container for alignment */}
-        <div className="text-start me-3"> {/* Align text to the left for the image */}
-          <img 
-            src="/ad0d5346-b722-46e6-b4a7-d18259b2d56d_0.jpeg" 
-            alt="Service Offerings" 
-          />
-        </div>
-        <div className="text-end"> {/* Aligns text to the right */}
-          <div className="right-align">
-            <h5>What services does Soft-Techs offer?</h5>
-            <p>We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
-          </div>
-          <div className="right-align">
-            <h5>How can I contact Soft-Techs for support?</h5>
-            <p>You can reach out to us via the 'Contact Us' button on our website or directly through our support email at support@softtechs.co.za.</p>
-          </div>
-        </div>
+    
+    
+    <div className="row align-items-center"> {/* Align items to the center vertically */}
+      <div className="col-sm-12 col-md-6"> {/* Image on the left */}
+        <img 
+          src="/ad0d5346-b722-46e6-b4a7-d18259b2d56d_0.jpeg" 
+          alt="Exciting Feature" 
+          className="img-fluid" 
+        />
+      </div>
+      <div className="col-sm-12 col-md-6 text-content"> {/* Text on the right */}
+      <h5 className="mb-4 text-left">Frequently Asked Questions</h5>
+      <h5>What services does Soft-Techs offer?</h5>
+      <p>We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
+      <h5>How can I contact Soft-Techs for support?</h5>
+      <p>You can reach out to us via the 'Contact Us' button on our website or directly through our support email at support@softtechs.co.za.</p>
       </div>
     </div>
-    <Link 
-      to="/faq" 
-      className="btn btn-secondary mt-3"
-      onClick={(e) => e.stopPropagation()} // Ensures it doesn't trigger modal
-    >
-      View All FAQs
-    </Link>
   </div>
 </section>
-
 
 
 

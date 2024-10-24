@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Features from './components/Features';
 import CombinedPage from './components/CombinePage';
 import LearnMorePage from './components/LearnMorePage';
+import ProductsPage from './components/ProductsPage'; // Import the ProductsPage component
 import Footer from './components/Footer';
 
 import './App.css'; // Ensure your CSS styles are applied
@@ -19,6 +20,9 @@ function App() {
 
           {/* Route for the Learn More page */}
           <Route path="/learn-more" element={<LearnMorePage />} />
+
+          {/* Route for the Products page */}
+          <Route path="/products" element={<ProductsPage />} /> {/* New route added */}
 
           {/* Main route for the Combined Page */}
           <Route path="/" element={<CombinedPage />} />

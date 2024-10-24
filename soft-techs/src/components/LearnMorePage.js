@@ -1,4 +1,5 @@
-import React from 'react'; 
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './LearnMorePage.css'; // Import CSS for styling
 
 const LearnMorePage = () => {
@@ -43,6 +44,10 @@ const LearnMorePage = () => {
       <p>
         Explore our range of products and services designed to empower your business. Together, let’s create a future where technology enhances every aspect of life.
       </p>
+
+      <Link to="/products">
+        <button className="learn-more-button">Learn More</button>
+      </Link>
     </div>
   );
 };
