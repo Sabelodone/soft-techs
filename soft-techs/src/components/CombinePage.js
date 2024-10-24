@@ -28,7 +28,7 @@ const CombinedPage = () => {
       aria-controls="navbarNav" 
       aria-expanded="false" 
       aria-label="Toggle navigation"
-      onClick={() => alert('Navbar toggled!')} // Testing click
+     
     >
       <span className="navbar-toggler-icon"></span>
     </button>
