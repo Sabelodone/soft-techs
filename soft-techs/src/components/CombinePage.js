@@ -115,32 +115,6 @@ const CombinedPage = () => {
 
 
 
-      {/* Testimonials Section */}
-      <section className="testimonials-section bg-light text-center py-5">
-        <div className="container">
-          <h2 className="mb-4">What Our Clients Say</h2>
-          <div className="row">
-            <div className="col-md-4">
-              <div className="testimonial-card p-4">
-                <p>"The team at Soft-Techs transformed our operations and made our workflows seamless!"</p>
-                <h5>- Dave Smith</h5>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="testimonial-card p-4">
-                <p>"Their dedication to quality and support is unmatched. Highly recommend!"</p>
-                <h5>- Vusi Zondo</h5>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="testimonial-card p-4">
-                <p>"Soft-Techs' solutions helped us grow our firm and serve our clients better!"</p>
-                <h5>- John Zitha</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
    {/* Fraquatly asked Section */}
 <section className="features-section py-5">
@@ -192,7 +166,37 @@ const CombinedPage = () => {
 
       {/* Contact Form Modal */}
       <ContactFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
+        
+      {/* Testimonials Section */}
+      <section className="testimonials-section bg-light text-center py-5">
+        <div className="container">
+          <h2 className="mb-4">What Our Clients Say</h2>
+          <div className="row">
+            <div className="col-md-4">
+              <div className="testimonial-card p-4">
+                <p>"The team at Soft-Techs transformed our operations and made our workflows seamless!"</p>
+                <h5>- Dave Smith</h5>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="testimonial-card p-4">
+                <p>"Their dedication to quality and support is unmatched. Highly recommend!"</p>
+                <h5>- Vusi Zondo</h5>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="testimonial-card p-4">
+                <p>"Soft-Techs' solutions helped us grow our firm and serve our clients better!"</p>
+                <h5>- John Zitha</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+
+    
   );
 };
 
