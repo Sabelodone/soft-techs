@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // Combined imports
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa'; // Home icon
 import './CombinePage.css'; // CSS for styling
@@ -7,49 +7,68 @@ import ContactFormModal from './ContactFormModal'; // Modal component for contac
 
 const CombinedPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
-  
+
   const logoPath = '/logo-no-background (1).png'; // Logo image path
 
+  useEffect(() => {
+    const images = document.querySelectorAll('.features-section img');
+    const testimonials = document.querySelectorAll('.testimonial-card');
 
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    images.forEach(image => observer.observe(image));
+    testimonials.forEach(testimonial => observer.observe(testimonial));
+
+    // Cleanup observer when component unmounts
+    return () => {
+      images.forEach(image => observer.unobserve(image));
+      testimonials.forEach(testimonial => observer.unobserve(testimonial));
+    };
+  }, []);
 
   return (
     <div className="landing-page">
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
-  <div className="container">
-    <Link to="/" className="navbar-brand">
-      <img src={logoPath} alt="Soft-Techs Logo" style={{ maxWidth: '50px' }} />
-    </Link>
-    <button 
-      className="navbar-toggler" 
-      type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#navbarNav" 
-      aria-controls="navbarNav" 
-      aria-expanded="false" 
-      aria-label="Toggle navigation"
-     
-    >
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav ms-auto">
-        <li className="nav-item">
-          <Link to="/" className="nav-link">
-            <FaHome className="me-2" /> Home
+        <div className="container">
+          <Link to="/" className="navbar-brand">
+            <img src={logoPath} alt="Soft-Techs Logo" style={{ maxWidth: '50px' }} />
           </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/services" className="nav-link">Our Services</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/product" className="nav-link">Product</Link>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+          <button 
+            className="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  <FaHome className="me-2" /> Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/services" className="nav-link">Our Services</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/product" className="nav-link">Product</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
       {/* Background Video */}
       <div className="video-background">
@@ -63,7 +82,7 @@ const CombinedPage = () => {
       <div className="hero-section text-center text-white py-5">
         <img className="img-fluid mb-3" src={logoPath} alt="Soft-Techs Logo" style={{ maxWidth: '200px' }} />
         <h2 className="display-4">Softer Productivity for Every Industry</h2>
-        <p className="lead">"Soft-Techs offers user-friendly software solutions that boost productivity and streamline workflows.</p>
+        <p className="lead">"Soft-Techs offers user-friendly software solutions that boost productivity and streamline workflows."</p>
         <Link to="/learn-more" className="btn btn-warning mx-2 rounded-pill shadow" aria-label="Learn more about Soft-Techs Suite-System">Learn More</Link>
       </div>
 
@@ -91,82 +110,64 @@ const CombinedPage = () => {
         </div>
       </section>
 
-  {/* Feature Section */}
+      {/* Feature Section */}
+      <section className="features-section">
+        <div className="container">  
+          <div className="row justify-content-start align-items-center"> {/* Align items to the left */}
+            <div className="col-sm-12 col-md-6 col-lg-6"> {/* Adjusting column width */}
+              <h2 className="mb-4 text-left">🔍 Discover Our Exclusive Offerings</h2>
+              <h3 className="font-weight-bold">Premium Quality</h3>
+              <p>Experience top-notch quality with every service we provide, tailored just for you!</p>
+              <Link to="/products" className="btn btn-primary mt-4">View Our Products</Link>
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-6"> {/* Image on the right */}
+              <img 
+                src="/91fa1ba7-e1dc-492c-a1d0-d3554752b0a8_0.jpeg" 
+                alt="Exciting Feature" 
+                className="img-fluid" 
+                style={{ marginLeft: '110px' }} // Adjust the margin as needed
+              />
+            </div>
+          </div>
+          {/* Repeat the above block for additional features without content */}
+        </div>
+      </section>
 
-<section className="features-section">
-  <div className="container">  
-    <div className="row justify-content-start align-items-center"> {/* Align items to the left */}
-      <div className="col-sm-12 col-md-6 col-lg-6"> {/* Adjusting column width */}
-      <h2 className="mb-4 text-left">🔍 Discover Our Exclusive Offerings</h2>
-
-        <h3 className="font-weight-bold">Premium Quality</h3>
-        <p>Experience top-notch quality with every service we provide, tailored just for you!</p>
-        <Link to="/products" className="btn btn-primary mt-4">
-          View Our Products
-        </Link>
-      </div>
-      <div className="col-sm-12 col-md-6 col-lg-6"> {/* Image on the right */}
-        <img 
-          src="/91fa1ba7-e1dc-492c-a1d0-d3554752b0a8_0.jpeg" 
-          alt="Exciting Feature" 
-          className="img-fluid" 
-          style={{ marginLeft: '110px' }} // Adjust the margin as needed
-        />
-      </div>
-    </div>
-    {/* Repeat the above block for additional features without content */}
-  </div>
-</section>
-
-
-
-
-
-   {/* Frequently Asked Section */}
-<section className="features-section py-5">
-  <div className="container">
-    <div className="row align-items-center"> {/* Align items to the center vertically */}
-      <div className="col-sm-12 col-md-6"> {/* Image on the left */}
-      <img src="/ad0d5346-b722-46e6-b4a7-d18259b2d56d_0.jpeg" alt="Exciting Feature" className="img-fluid" />
-      </div>
-      <div className="col-sm-12 col-md-6 text-content"> {/* Text on the right */}
-        <h2 className="mb-4 text-left">Frequently Asked Questions</h2>
-        <h3>What services does Soft-Techs offer?</h3>
-        <p>☑️We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
-        <h3>How can I contact Soft-Techs for support?</h3>
-        <p>☑️You can reach out to us via the 'Contact Us' button on our website or directly through our support email at support@softtechs.co.za.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
+      {/* Frequently Asked Questions Section */}
+      <section className="features-section py-5">
+        <div className="container">
+          <div className="row align-items-center"> {/* Align items to the center vertically */}
+            <div className="col-sm-12 col-md-6"> {/* Image on the left */}
+              <img src="/ad0d5346-b722-46e6-b4a7-d18259b2d56d_0.jpeg" alt="Exciting Feature" className="img-fluid" />
+            </div>
+            <div className="col-sm-12 col-md-6 text-content"> {/* Text on the right */}
+              <h2 className="mb-4 text-left">Frequently Asked Questions</h2>
+              <h3>What services does Soft-Techs offer?</h3>
+              <p>☑️ We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
+              <h3>How can I contact Soft-Techs for support?</h3>
+              <p>☑️ You can reach out to us via the 'Contact Us' button on our website or directly through our support email at support@softtechs.co.za.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action Section */}
-<section className="call-to-action-section">
-  <div className="container">
-  <h2 className="display-4 font-weight-bold text-dark mb-4"> Ready to Get Started?🏁</h2>
-
-    <p className="lead text-dark mb-4">
-      Contact us today for a personalized consultation!
-    </p>
-    <button 
-      className="btn btn-danger btn-lg rounded-pill shadow" 
-      onClick={() => setIsModalOpen(true)}
-    >
-      Contact Us
-    </button>
-  </div>
-</section>
-
-      
+      <section className="call-to-action-section">
+        <div className="container">
+          <h2 className="display-4 font-weight-bold text-dark mb-4"> Ready to Get Started?🏁</h2>
+          <p className="lead text-dark mb-4">Contact us today for a personalized consultation!</p>
+          <button 
+            className="btn btn-danger btn-lg rounded-pill shadow" 
+            onClick={() => setIsModalOpen(true)}
+          >
+            Contact Us
+          </button>
+        </div>
+      </section>
 
       {/* Contact Form Modal */}
       <ContactFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-        
       {/* Testimonials Section */}
       <section className="testimonials-section bg-light text-center py-5">
         <div className="container">
@@ -186,16 +187,19 @@ const CombinedPage = () => {
             </div>
             <div className="col-md-4">
               <div className="testimonial-card p-4">
-                <p>"Soft-Techs' solutions helped us grow our firm and serve our clients better!"</p>
-                <h5>- John Zitha</h5>
+                <p>"Soft-Techs delivered exactly what we needed and more. Fantastic experience!"</p>
+                <h5>- Jessica Jones</h5>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </div>
 
-    
+      {/* Footer */}
+      <footer className="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Soft-Techs. All rights reserved.</p>
+      </footer>
+    </div>
   );
 };
 

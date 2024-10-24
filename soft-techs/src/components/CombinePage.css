@@ -182,6 +182,18 @@
     }
 }
 
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .features-section {
@@ -437,11 +449,28 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     margin-bottom: 20px; /* Space between cards */
+    opacity: 0; /* Start with hidden opacity */
+    transform: translateX(-100%); /* Start from the left */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Combined transitions */
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.testimonial-card.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move to original position */
+}
+
+/* Optional: Add classes for right-side entry */
+.testimonial-card.right {
+    transform: translateX(100%); /* Start from the right */
+}
+
+.testimonial-card.right.visible {
+    transform: translateX(0); /* Move to original position */
 }
 
 .testimonials-section h2 {
