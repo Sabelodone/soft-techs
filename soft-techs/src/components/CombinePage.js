@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'; // Combined imports
 import { Link } from 'react-router-dom';
-import { FaHome } from 'react-icons/fa'; // Home icon
 import './CombinePage.css'; // CSS for styling
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
 import ContactFormModal from './ContactFormModal'; // Modal component for contact form
+
 
 const CombinedPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
@@ -35,12 +35,13 @@ const CombinedPage = () => {
 
   return (
     <div className="landing-page">
-      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
+      
       <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div className="container">
-          <Link to="/" className="navbar-brand">
-            <img src={logoPath} alt="Soft-Techs Logo" style={{ maxWidth: '50px' }} />
-          </Link>
+          <a href="/" className="navbar-brand">
+            <img src="/logo-no-background (1).png" alt="Soft-Techs Logo" style={{ maxWidth: '70px' }} />
+          </a>
           <button 
             className="navbar-toggler" 
             type="button" 
@@ -55,20 +56,22 @@ const CombinedPage = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  <FaHome className="me-2" /> Home
-                </Link>
+                <a href="/" className="nav-link">
+                  Home
+                </a>
               </li>
               <li className="nav-item">
-                <Link to="/services" className="nav-link">Our Services</Link>
+                <a href="/services" className="nav-link">Our Services</a>
               </li>
               <li className="nav-item">
-                <Link to="/product" className="nav-link">Product</Link>
+                <a href="/product" className="nav-link">Product</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+    
+</nav>
 
       {/* Background Video */}
       <div className="video-background">

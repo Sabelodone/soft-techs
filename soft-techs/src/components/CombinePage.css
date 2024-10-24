@@ -5,6 +5,78 @@
     font-family: 'Arial', sans-serif; /* Use a clean, professional font */
 }
 
+.navbar {
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px 20px; /* Adjust padding for spacing */
+    font-family: 'Arial', sans-serif; /* Ensure a clean font for the entire navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it spans the entire width */
+    z-index: 1000; /* Make sure it's on top of other elements */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Align the logo with the text vertically */
+}
+
+.navbar-logo {
+    max-width: 60px; /* Control the size of the logo */
+    height: auto; /* Keep the aspect ratio */
+    margin-right: 10px; /* Add some space between the logo and text */
+    max-width: 100px; /* Large size */
+
+}
+
+
+
+.navbar-brand img {
+    max-width: 60px; /* Slightly larger logo */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.5rem; /* Large font size */
+    font-weight: bold; /* Bold text */
+    color: #6f42c1; /* Purple color for links to match the luxurious theme */
+    padding: 0.5rem 1rem; /* Add padding for spacing */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #0056b3; /* Darker color on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Navbar Toggler Icon */
+.navbar-toggler-icon {
+    color: #6f42c1; /* Purple icon for consistency */
+    font-size: 1.5rem; /* Larger size */
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        text-align: center; /* Center the mobile menu items */
+    }
+
+    .navbar-toggler {
+        border: none; /* Remove border around the toggler */
+    }
+
+    .navbar-toggler:hover {
+        background-color: #6f42c1; /* Highlight the toggler on hover */
+        color: #fff; /* White color for better contrast */
+    }
+}
+
 /* Hero Section */
 .hero-section {
     position: relative;

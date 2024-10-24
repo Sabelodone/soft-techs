@@ -22,7 +22,10 @@ function App() {
           <Route path="/learn-more" element={<LearnMorePage />} />
 
           {/* Route for the Products page */}
-          <Route path="/products" element={<ProductsPage />} /> {/* New route added */}
+          <Route path="/products" element={<ProductsPage />} /> 
+
+          {/* Route for Our Services - it points to ProductsPage */}
+          <Route path="/services" element={<ProductsPage />} /> {/* Add this route */}
 
           {/* Main route for the Combined Page */}
           <Route path="/" element={<CombinedPage />} />
