@@ -1,5 +1,5 @@
 .products-page {
-    padding: 60px 20px; /* Increased padding for better spacing */
+    padding: 80px 30px; /* Increased padding for a spacious layout */
     font-family: 'Roboto', sans-serif; /* Modern font for a fresh look */
     background-color: #f0f4ff; /* Soft blue background for a calming effect */
     color: #333;
@@ -8,109 +8,111 @@
 .products-page h1 {
     text-align: center;
     color: #5a3e91; /* Rich purple color for the heading */
-    margin-bottom: 30px; /* Increased margin for better spacing */
-    font-size: 40px; /* Larger heading size */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    letter-spacing: 1px; /* Spacing between letters */
+    margin-bottom: 40px; /* Increased margin for better spacing */
+    font-size: 48px; /* Larger heading size */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    letter-spacing: 2px; /* Spacing between letters */
 }
 
 .products-page p {
     text-align: center;
-    font-size: 20px; /* Larger paragraph text */
+    font-size: 22px; /* Larger paragraph text */
     color: #666; /* Slightly lighter gray for improved readability */
-    margin-bottom: 50px; /* Increased margin for spacing */
+    margin-bottom: 60px; /* Increased margin for spacing */
 }
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid with larger items */
-    gap: 30px; /* Increased space between grid items */
-    padding: 0 20px; /* Padding on the sides */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Responsive grid with larger items */
+    gap: 40px; /* Increased space between grid items */
+    padding: 0 30px; /* Padding on the sides */
 }
 
 .product-card {
     background-color: #ffffff; /* White background for cards */
-    border-radius: 12px; /* More rounded corners */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
-    padding: 30px; /* Increased padding for better content spacing */
+    border-radius: 15px; /* More rounded corners for elegance */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    padding: 40px; /* Increased padding for better content spacing */
     text-align: center; /* Center align text */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effect */
+    transition: transform 0.4s, box-shadow 0.4s; /* Smooth transitions for hover effect */
     position: relative; /* For overlay positioning */
     overflow: hidden; /* Prevents overflow for rounded corners */
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Slight lift on hover for interaction */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: translateY(-10px); /* More pronounced lift on hover for interaction */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .product-icon {
-    font-size: 50px; /* Larger icon size */
-    margin-bottom: 20px; /* More space below the icon */
+    font-size: 60px; /* Larger icon size for visual impact */
+    margin-bottom: 25px; /* More space below the icon */
     color: #5a3e91; /* Matching icon color */
 }
 
 .product-title {
     color: #5a3e91; /* Purple color for product titles */
-    font-size: 26px; /* Larger title size */
-    margin: 15px 0; /* Space around the title */
-    font-weight: 600; /* Slightly bolder font */
+    font-size: 28px; /* Larger title size */
+    margin: 20px 0; /* Space around the title */
+    font-weight: 700; /* Bolder font for emphasis */
 }
 
 .product-description {
     color: #555; /* Medium gray for descriptions */
-    line-height: 1.8; /* Improve readability */
-    font-size: 16px; /* Size for better visibility */
-    margin-bottom: 15px; /* Space below description */
+    line-height: 1.6; /* Improve readability */
+    font-size: 18px; /* Size for better visibility */
+    margin-bottom: 20px; /* Space below description */
 }
 
 .product-price {
     color: #28a745; /* Green color for prices */
-    font-size: 22px; /* Price size */
-    margin: 10px 0; /* Space around the price */
-    font-weight: 700; /* Bolder font for emphasis */
+    font-size: 24px; /* Price size */
+    margin: 15px 0; /* Space around the price */
+    font-weight: 800; /* Bolder font for emphasis */
 }
 
 .buy-now-button {
     background-color: #5a3e91; /* Purple background for button */
     color: #fff; /* White text for button */
     border: none; /* No border */
-    padding: 12px 24px; /* Padding for button */
-    border-radius: 8px; /* More rounded corners */
+    padding: 14px 28px; /* Padding for button */
+    border-radius: 10px; /* More rounded corners */
     cursor: pointer; /* Pointer cursor for hover */
     transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover */
-    font-size: 18px; /* Button font size */
+    font-size: 20px; /* Button font size */
     font-weight: bold; /* Bold text for button */
 }
 
 .buy-now-button:hover {
     background-color: #473267; /* Darker purple on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
 }
+
+
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .products-page h1 {
-        font-size: 30px; /* Smaller heading on mobile */
+        font-size: 34px; /* Smaller heading on mobile */
     }
 
     .products-page p {
-        font-size: 18px; /* Smaller paragraph text on mobile */
+        font-size: 20px; /* Smaller paragraph text on mobile */
     }
 
     .product-title {
-        font-size: 22px; /* Smaller title on mobile */
+        font-size: 24px; /* Smaller title on mobile */
     }
 
     .product-description {
-        font-size: 14px; /* Smaller description text on mobile */
+        font-size: 16px; /* Smaller description text on mobile */
     }
 
     .product-price {
-        font-size: 18px; /* Smaller price on mobile */
+        font-size: 20px; /* Smaller price on mobile */
     }
 
     .product-card {
-        padding: 20px; /* Reduced padding on mobile for better fit */
+        padding: 25px; /* Reduced padding on mobile for better fit */
     }
 }

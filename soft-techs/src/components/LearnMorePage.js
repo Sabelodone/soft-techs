@@ -7,12 +7,12 @@ const teamMembers = [
   {
     name: "Jameson Pillay",
     position: "CEO, Founder and Backend Developer",
-    imageUrl: "jameson.jpg", // Make sure to add these images to your public folder
-    
+    imageUrl: "jameson.jpg", // Ensure these images are in your public folder
+   
   },
   {
     name: "Sabelo Sibaya",
-    position: "Co-founder and Frontend Developer",
+    position: "COO, Co-founder and Frontend Developer",
     imageUrl: "IMG_6067.JPG",
     
   },
@@ -36,10 +36,7 @@ const LearnMorePage = () => {
       </section>
 
       <section className="team-section">
-      <div class="team-section">
         <h2>Meet Our Team</h2>
-      </div>
-
         <div className="team-members">
           {teamMembers.map((member, index) => (
             <div key={index} className="team-member">
@@ -80,8 +77,6 @@ const LearnMorePage = () => {
       </section>
 
       <div>
-       
-
         <Link to="/products">
           <button className="learn-more-button" aria-label="Learn more about our services">Services</button>
         </Link>

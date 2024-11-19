@@ -7,7 +7,7 @@ const Footer = () => {
     const footerLinks = [
         {
           label: 'About Us',
-          content: "At TechArtistry Design, we are dedicated to delivering innovative and creative design solutions tailored to meet your business's needs. Our expert team specializes in providing high-quality web design, graphic design, and branding services to help your business stand out in a competitive market."
+          content: "At Soft~techs, we are dedicated to delivering innovative and creative design solutions tailored to meet your business's needs. Our expert team specializes in providing high-quality web design, graphic design, and branding services to help your business stand out in a competitive market."
         },
         {
           label: 'Contact Us',

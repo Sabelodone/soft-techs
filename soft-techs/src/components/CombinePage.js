@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react'; // Combined imports
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './CombinePage.css'; // CSS for styling
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
 import ContactFormModal from './ContactFormModal'; // Modal component for contact form
-
+import { Container, Row, Col,  } from 'react-bootstrap';
 
 const CombinedPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
-
   const logoPath = '/logo-no-background (1).png'; // Logo image path
 
   useEffect(() => {
@@ -35,12 +34,11 @@ const CombinedPage = () => {
 
   return (
     <div className="landing-page">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
-      
+      {/* Navigation Bar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div className="container">
           <a href="/" className="navbar-brand">
-            <img src="/logo-no-background (1).png" alt="Soft-Techs Logo" style={{ maxWidth: '70px' }} />
+            <img src={logoPath} alt="Soft-Techs Logo" style={{ maxWidth: '70px' }} />
           </a>
           <button 
             className="navbar-toggler" 
@@ -56,9 +54,7 @@ const CombinedPage = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a href="/" className="nav-link">
-                  Home
-                </a>
+                <a href="/" className="nav-link">Home</a>
               </li>
               <li className="nav-item">
                 <a href="/services" className="nav-link">Our Services</a>
@@ -70,8 +66,6 @@ const CombinedPage = () => {
           </div>
         </div>
       </nav>
-    
-</nav>
 
       {/* Background Video */}
       <div className="video-background">
@@ -113,45 +107,50 @@ const CombinedPage = () => {
         </div>
       </section>
 
-      {/* Feature Section */}
-      <section className="features-section">
-        <div className="container">  
-          <div className="row justify-content-start align-items-center"> {/* Align items to the left */}
-            <div className="col-sm-12 col-md-6 col-lg-6"> {/* Adjusting column width */}
-              <h2 className="mb-4 text-left">🔍 Discover Our Exclusive Offerings</h2>
+     {/* Feature Section */}
+     <section className="features-section">
+        <Container>
+          <Row className="justify-content-start align-items-center">
+            <Col sm={12} md={6} lg={6} className="text-content">
+              <h2 className="mb-4 text-left">Discover Our Exclusive Offerings</h2>
               <h3 className="font-weight-bold">Premium Quality</h3>
               <p>Experience top-notch quality with every service we provide, tailored just for you!</p>
               <Link to="/products" className="btn btn-primary mt-4">View Our Products</Link>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-6"> {/* Image on the right */}
+            </Col>
+            <Col sm={12} md={6} lg={6} className="image-content">
               <img 
                 src="/91fa1ba7-e1dc-492c-a1d0-d3554752b0a8_0.jpeg" 
                 alt="Exciting Feature" 
                 className="img-fluid" 
-                style={{ marginLeft: '110px' }} // Adjust the margin as needed
+                style={{ marginLeft: '110px' }} 
               />
-            </div>
-          </div>
-          {/* Repeat the above block for additional features without content */}
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       {/* Frequently Asked Questions Section */}
       <section className="features-section py-5">
-        <div className="container">
-          <div className="row align-items-center"> {/* Align items to the center vertically */}
-            <div className="col-sm-12 col-md-6"> {/* Image on the left */}
+        <Container>
+          <Row className="align-items-center">
+            <Col sm={12} md={6} className="image-content">
               <img src="/ad0d5346-b722-46e6-b4a7-d18259b2d56d_0.jpeg" alt="Exciting Feature" className="img-fluid" />
-            </div>
-            <div className="col-sm-12 col-md-6 text-content"> {/* Text on the right */}
+            </Col>
+            <Col sm={12} md={6} className="text-content">
               <h2 className="mb-4 text-left">Frequently Asked Questions</h2>
               <h3>What services does Soft-Techs offer?</h3>
-              <p>☑️ We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
+              <div className="d-flex align-items-start">
+                <span style={{ marginRight: '8px' }}>☑️</span>
+                <p>We offer a range of services including cloud solutions, data analytics, AI systems, and custom software development tailored for law firms.</p>
+              </div>
               <h3>How can I contact Soft-Techs for support?</h3>
-              <p>☑️ You can reach out to us via the 'Contact Us' button on our website or directly through our support email at support@softtechs.co.za.</p>
-            </div>
-          </div>
-        </div>
+              <div className="d-flex align-items-start">
+                <span style={{ marginRight: '8px' }}>☑️</span>
+                <p>You can reach out to us via the 'Contact Us' button on our website or directly through our support email at support@softtechs.co.za.</p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       {/* Call to Action Section */}
@@ -191,16 +190,16 @@ const CombinedPage = () => {
             <div className="col-md-4">
               <div className="testimonial-card p-4">
                 <p>"Soft-Techs delivered exactly what we needed and more. Fantastic experience!"</p>
-                <h5>- Jessica Jones</h5>
+                <h5>- Susan Lee</h5>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-dark text-white text-center py-4">
-        <p>&copy; 2024 Soft-Techs. All rights reserved.</p>
+      {/* Footer Section */}
+      <footer className="footer-section bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Soft-Techs. All Rights Reserved.</p>
       </footer>
     </div>
   );

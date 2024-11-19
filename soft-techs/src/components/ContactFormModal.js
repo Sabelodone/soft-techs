@@ -1,37 +1,31 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import './ContactFormModal.css'; // Adjust the path as necessary
+import axios from 'axios';
+import './ContactFormModal.css';
 
 const ContactFormModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
+
+  const [responseMessage, setResponseMessage] = useState('');
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // Handle form submission logic (e.g., sending data to an API)
-      console.log('Form submitted:', formData);
-      onClose(); // Close the modal after submission
-    }
+    setFormData({ ...formData, [name]: value });
   };
 
   const validateForm = () => {
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
     let isValid = true;
 
-    // Name validation
-    const nameInput = document.getElementById('name');
     if (!formData.name.trim()) {
       nameInput.setCustomValidity('Please enter your full name.');
       nameInput.reportValidity();
@@ -40,8 +34,6 @@ const ContactFormModal = ({ isOpen, onClose }) => {
       nameInput.setCustomValidity('');
     }
 
-    // Email validation
-    const emailInput = document.getElementById('email');
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailPattern.test(formData.email)) {
       emailInput.setCustomValidity('Please enter a valid email address.');
@@ -51,8 +43,6 @@ const ContactFormModal = ({ isOpen, onClose }) => {
       emailInput.setCustomValidity('');
     }
 
-    // Message validation
-    const messageInput = document.getElementById('message');
     if (!formData.message.trim()) {
       messageInput.setCustomValidity('Please write a message.');
       messageInput.reportValidity();
@@ -64,12 +54,33 @@ const ContactFormModal = ({ isOpen, onClose }) => {
     return isValid;
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/contact', formData);
+      setResponseMessage(response.data.message);
+      setSuccess(true);
+      setFormData({ name: '', email: '', message: '' }); // Reset form after successful submission
+    } catch (error) {
+      console.error('There was an error submitting the form!', error.response || error);
+      setResponseMessage('There was an error submitting the form.');
+      setSuccess(false);
+    }
+  };
+
   return (
     <Modal show={isOpen} onHide={onClose} centered>
       <Modal.Header closeButton className="modal-header">
         <Modal.Title className="modal-title">Get in Touch</Modal.Title>
       </Modal.Header>
       <Modal.Body className="modal-body">
+        {responseMessage && (
+          <div className={`alert ${success ? 'alert-success' : 'alert-danger'}`}>
+            {responseMessage}
+          </div>
+        )}
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label">Full Name</label>
